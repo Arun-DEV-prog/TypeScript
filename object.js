@@ -15,3 +15,26 @@ var indroduction = function (student1) {
 };
 console.log(student1.fn("india"));
 console.log(indroduction(student1));
+var Roles;
+(function (Roles) {
+    Roles["user"] = "User";
+    Roles["admin"] = "admin";
+})(Roles || (Roles = {}));
+var user1 = {
+    name: 'about',
+    email: 'abc@gmail.com',
+    password: '3333',
+    role: Roles.user
+};
+var user2 = {
+    name: 'abulr',
+    email: 'addd@gmail.com',
+    password: '3333',
+    role: Roles.admin
+};
+var isAdmin = function (user) {
+    var name = user.name, email = user.email, role = user.role;
+    return role === 'admin' ? "".concat(user.email, " is edit this website") : "".concat(user.email, " is not edit this website");
+};
+console.log(isAdmin(user1));
+console.log(isAdmin(user2));

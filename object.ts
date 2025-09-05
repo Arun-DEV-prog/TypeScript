@@ -40,3 +40,39 @@ const indroduction=(student1:Student):string=>{
 
 console.log(student1.fn("india"));
 console.log(indroduction(student1));
+
+
+enum Roles{
+    user="User",
+    admin="admin"
+}
+
+type loginDetails={
+    name?: string,
+    email:string,
+    password:string,
+    role:Roles,
+}
+
+const user1: loginDetails={
+    name:'about',
+    email:'abc@gmail.com',
+    password:'3333',
+    role:Roles.user
+}
+const user2: loginDetails={
+    name:'abulr',
+    email:'addd@gmail.com',
+    password:'3333',
+    role:Roles.admin
+}
+
+const isAdmin=(user:loginDetails)=>{
+    const {name,email,role}=user;
+  return  role==='admin' ? `${user.email} is edit this website`: `${user.email} is not edit this website`
+
+
+}
+
+console.log(isAdmin(user1))
+console.log(isAdmin(user2))
