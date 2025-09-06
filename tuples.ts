@@ -13,3 +13,5 @@ const displayPersonInfo=(person:PersonInfo)=>{
 
 displayPersonInfo(person1)
 displayPersonInfo(person2)
+
+
